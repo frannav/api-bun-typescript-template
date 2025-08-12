@@ -1,13 +1,21 @@
 import cors from "cors";
 import express from "express";
+import type { Application } from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerDocs from "../config/swagger";
+import { requestLogger } from "../middleware/pino";
+import { errorHandler } from "../middleware/errorHandler";
+import routes from "../routes";
 
-const createServer = () => {
-	const app = express();
-
+const configExpressApp = (app: Application) => {
+	app.use(requestLogger);
 	app.use(express.json());
 	app.use(cors());
+	app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+	app.use(errorHandler);
+	app.use(routes);
 
 	return app;
 };
 
-export default createServer;
+export default configExpressApp;
