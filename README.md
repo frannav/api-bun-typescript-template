@@ -1,4 +1,4 @@
-# ATM API Backend
+# Template API Bun.js and TypeScript
 
 ## Prerequisites
 
