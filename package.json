@@ -14,6 +14,7 @@
 		"format": "bun biome format --write .",
 		"lint": "bun biome lint --write .",
 		"lint:check": "bun biome check .",
+		"lint:check:fix": "bun biome check . --write",
 		"ci:check": "bun biome ci .",
 		"test": "bun run test:unit && bun run test:integration",
 		"test:unit": "bun test src/modules",

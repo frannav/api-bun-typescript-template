@@ -61,6 +61,7 @@ In the `package.json` file, you'll find several scripts for common development t
 -   `test:integration`: Runs only the integration tests.
 -   `lint`: Lints and automatically fixes issues in the codebase.
 -   `lint:check`: Checks for linting and formatting errors without applying changes.
+-   `lint:check:fix`: Checks for linting and formatting errors applying safe changes.
 -   `format`: Formats the entire codebase using Biome.
 -   `ci:check`: Runs all Biome checks (lint, format, etc.), suitable for a CI pipeline.
 
