@@ -1,10 +1,10 @@
 import cors from "cors";
-import express from "express";
 import type { Application } from "express";
+import express from "express";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocs from "../config/swagger";
-import { requestLogger } from "../middleware/pino";
 import { errorHandler } from "../middleware/errorHandler";
+import { requestLogger } from "../middleware/pino";
 import routes from "../routes";
 
 const configExpressApp = (app: Application) => {
