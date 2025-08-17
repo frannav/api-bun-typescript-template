@@ -8,7 +8,7 @@
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone api-bun-typescript-template
     cd bun-ts-api
     ```
 
@@ -20,7 +20,7 @@
 3.  **Set up environment variables:**
     Create a `.env` file in the root of the project and add the following variables:
     ```
-    PORT=3000
+    PORT=8080
     ```
 
 ## Usage
@@ -33,7 +33,7 @@ To run the server in development mode with auto-reloading:
 bun run dev
 ```
 
-The server will be available at `http://localhost:3000`.
+The server will be available at `http://localhost:8080`.
 
 ### Production
 
@@ -78,7 +78,7 @@ You can also run the application using Docker and Docker Compose.
     ```bash
     docker-compose up -d
     ```
-    This command builds the image and starts the container in the background. The API will be available at `http://localhost:3000`. The `db.json` file is mounted as a volume to persist data across container restarts.
+    This command builds the image and starts the container in the background. The API will be available at `http://localhost:8080`. The `db.json` file is mounted as a volume to persist data across container restarts.
 
 2.  **Manual build and run with Docker:**
     -   **Build the image:**
@@ -87,14 +87,14 @@ You can also run the application using Docker and Docker Compose.
         ```
     -   **Run the container:**
         ```bash
-        docker run -p 3000:3000 -v ./db.json:/app/db.json --env-file ./.env bun-ts-api
+        docker run -p 8080:8080 -v ./db.json:/app/db.json --env-file ./.env bun-ts-api
         ```
 
 ## API Documentation
 
 This project uses Swagger for API documentation. Once the server is running, you can access the interactive API documentation by navigating to `/api-docs` in your browser.
 
--   **URL**: `http://localhost:3000/api-docs`
+-   **URL**: `http://localhost:8080/api-docs`
 
 The documentation provides detailed information about all available endpoints, including request parameters, response bodies, and status codes.
 

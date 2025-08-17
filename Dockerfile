@@ -36,7 +36,7 @@ COPY --from=prerelease /usr/src/app/.development.env .
 
 # Run the application as a non-root user for security
 USER bun
-EXPOSE 3000/tcp
+EXPOSE 8080/tcp
 
 # Define the entrypoint for the container
 ENTRYPOINT [ "bun", "dist/index.js" ]
